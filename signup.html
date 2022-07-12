@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do App</title>
+
+  <!-- ---------------- estilos compartilhados entre login e signup ---------------- -->
+  <link rel="stylesheet" href="styles/acesso.css">
+
+  <!-- ---------------------- lógica aplicada no registro -------------------- -->
+
+</head>
+
+<body>
+
+  <div class="left">
+    <img src="./assets/pessoa-signup.png" alt="">
+  </div>
+  <div class="right">
+    <form>
+      <div class="form-header">
+        <p>To-Do App</p>
+      </div>
+
+      <div class="form-control">
+        <label for="userName">Nome: </label>
+        <input type="text" id="userName" minlength="3" required>
+        <small>Forneça um nome válido</small>
+      </div>
+      
+      <div class="form-control">
+        <label for="userSurName">Sobrenome: </label>
+        <input type="text" id="userSurName" minlength="3" required>
+        <small>Forneça um sobrenome válido</small>
+      </div>
+      
+      <div class="form-control">
+        <label for="userEmail">Email: </label>
+        <input type="email" id="userEmail"  minlength="5" required>
+        <small>Forneça um email válido</small>
+      </div>
+      
+      <div class="form-control">
+        <label for="userPassword">Senha: </label>
+        <input type="password" id="userPassword" minlength="8" required>
+        <small>Digite uma senha válida</small>
+      </div>
+      
+      <div class="form-control">
+        <label for="userPasswordConfirm">Repetir senha: </label>
+        <input type="password" id="userPasswordConfirm" minlength="8" required>
+        <small>Repita a mesma senha</small>
+      </div>
+
+
+      <button type="submit" id="buttonCreateUser">Criar conta</button>
+
+    </form>
+
+    <div class="ingressar">
+      <a href="index.html">Já possui conta? Acesse aqui</a>
+    </div>
+  </div>
+
+  <script src="./scripts/signup.js"></script>
+</body>
+
+</html>
