@@ -1,5 +1,5 @@
 let token = localStorage.getItem('token')
-const apiUrl = 'https://ctd-todo-api.herokuapp.com/v1'
+const apiUrl = 'https://ctd-fe2-todo-v2.herokuapp.com/v1'
 const createTaskButtonElement = document.querySelector('#createTaskButton')
 const skeletonElement = document.querySelector('#skeleton')
 const listTasks = document.querySelector('.tarefas-pendentes')
@@ -11,7 +11,7 @@ const headersAuthRequest = {
 
 function getUserInfo() {
 
-    fetch('https://ctd-todo-api.herokuapp.com/v1/users/getMe', { headers: headersAuthRequest }).then(
+    fetch('https://ctd-fe2-todo-v2.herokuapp.com/v1/users/getMe', { headers: headersAuthRequest }).then(
 
         response => {
 
