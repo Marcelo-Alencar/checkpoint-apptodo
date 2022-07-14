@@ -9,6 +9,8 @@ const headersAuthRequest = {
     'Authorization': token
 }
 
+
+
 function getUserInfo() {
 
     fetch('https://ctd-fe2-todo-v2.herokuapp.com/v1/users/getMe', { headers: headersAuthRequest }).then(
@@ -24,7 +26,10 @@ function getUserInfo() {
                         console.log(user)
                         console.log(`${user.firstName} ${user.lastName}`)
 
-                        // !Insira a lógica aqui para mostrar o Nome Completo do usuário no HTML da Aplicação
+                        function displayUserName(object) {
+                            const userName = document.getElementById('userName');
+                            userName.innerText = `${object.firstName} ${object.lastName}`;
+                          }
 
                     }
 

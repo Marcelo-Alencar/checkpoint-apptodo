@@ -16,6 +16,11 @@ a {
   color: white
 }
 
+
+h4{
+  color: rgb(107, 107, 107);
+
+}
 .user-info {
   display: flex;
   align-items: center;
@@ -52,11 +57,11 @@ a {
   position: relative;
   display: flex;
   align-items: center;
-  background-color: white;
+  background-color: var(--background);
   width: 80%;
   margin: 0 10%;
   padding: 1em;
-  box-shadow: 2px 2px 10px lightgrey;
+  box-shadow: 2px 2px 10px var(--foreground);
   border-radius: .2em;
   z-index: 20;
 }
@@ -68,15 +73,17 @@ a {
   border-radius: 0;
   padding: .3em;
   font-size: 1.1em;
+  background-color: var(--background);
 }
 
 .nova-tarefa input:focus {
   outline: none;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid var(--secondary);
 }
 
 .nova-tarefa input::placeholder {
-  color: rgb(197, 197, 197);
+  color: var(--foreground);
+  background-color: var(--background);
   text-indent: .2em;
 }
 
@@ -102,12 +109,17 @@ a {
 .not-done {
   width: 2em;
   height: 2em;
-  background-color: var(--app-grey);
+  background-color: var(--secondary);
   margin-right: 1em;
   border-radius: 50%;
   cursor: pointer;
   text-align: center;
   color: grey;
+}
+
+.botoes i{
+  padding-left: 1rem;
+  color: #8e64c5; 
 }
 
 /* Lista de tarefas ----------------------------------------------------------- */
@@ -130,7 +142,7 @@ a {
   position: relative;
   height: 1.5em;
   width: 1.5em;
-  background-color: white;
+  background-color: var(--background);
   box-shadow: 2px 2px 5px lightgrey;
   border: 2px solid var(--secondary);
   z-index: 2;
@@ -163,22 +175,22 @@ a {
   background-color: var(--secondary);
 }
 
-.tarefa .descricao {
+.tarefa .descricaoclass {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex: 1;
-  background-color: white;
+  background-color: var(--background);
   padding: 1em 2em;
   box-shadow: 2px 2px 5px lightgrey;
 }
 
 .tarefa .nome {
-  color: rgb(95, 95, 95);
+  color: rgb(10, 8, 8);
 }
 
 .tarefa .timestamp {
-  font-size: .9em;
+  font-size: .7em;
   color: rgb(134, 134, 134);
 }
 
@@ -189,7 +201,7 @@ a {
   width: 8em;
   text-align: center;
   padding: .5em 1em;
-  background-color: white;
+  background-color: var(--background);
   border-radius: .2em;
   box-shadow: 3px 3px 5px lightgrey;
   color: rgb(170, 170, 170);
@@ -208,36 +220,42 @@ a {
 }
 
 .tarefas-terminadas i{
-  color: grey;
-  background-color: rgb(228, 228, 228);
+  color: var(--secondary);
+  /* background-color: rgb(228, 228, 228); */
+  background-color: var(--background);
 }
+
 .tarefas-terminadas button{
   margin-left: 10px;
 }
 
-.tarefas-terminadas .tarefa .descricao {
-  background-color: rgb(228, 228, 228);
+.tarefas-terminadas .tarefa .descricaoclass {
+  /* background-color: rgb(228, 228, 228); */
+  background-color: var(--background);
 }
 
-.tarefas-terminadas .tarefa .descricao .nome {
+.tarefas-terminadas .tarefa .descricaoclass .nome {
   color: grey;
   text-decoration: line-through;
 }
 
-#skeleton .descricao{
-  background-color: rgb(189, 189, 189);
-}
-#skeleton p{
-  background-color: rgb(214, 214, 214);
-  color: rgb(214, 214, 214);
-}
-#skeleton .not-done{
+.skeleton .descripction{
   background-color: rgb(189, 189, 189);
 }
 
-#skeleton{
+.skeleton p{
+  background-color: rgb(214, 214, 214);
+  color:  rgb(65 55 55);
+}
+
+.skeleton .not-done{
+  background-color: rgb(189, 189, 189);
+}
+
+.skeleton{
   animation: trasparencia 1s infinite;
 }
+
 @keyframes trasparencia {
   0%{ opacity: 0.5;}
   100%{ opacity: 0.8;}

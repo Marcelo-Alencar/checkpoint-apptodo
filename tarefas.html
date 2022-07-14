@@ -22,66 +22,46 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 
-  <title>To-Do App</title>
+  <!-- logica da página -->
+
+
+  <title>To Do App - Turma 6</title>
 </head>
 
 <body>
   <header>
     <nav>
-      <a href="#">Tarefas</a>
+      <a href="#">Lista de Tarefas</a>
     </nav>
 
     <div class="user-info">
-      <p>Nome usuário</p>
+      <p id="user-name">Nome usuário</p>
       <div class="user-image"></div>
-      <p id="closeApp">Finalizar sessão</i>
-      </p>
+      <p id="closeApp">Finalizar sessão</p>
     </div>
   </header>
 
 
-  <form class="nova-tarefa">
+  <form id="formNovatarefa" class="nova-tarefa">
     <div class="not-done "></div>
     <input id="novaTarefa" type="text" placeholder="Nova tarefa">
     <button type="submit">
-      <img src="./assets/plus.png" alt="Adicionar uma nova tarefa">
+      <img src="./assets/plus.png" alt="Adicionar tarefa">
     </button>
   </form>
 
 
+  <div id="skeleton" class="skeleton">
   <ul class="tarefas-pendentes">
-    <div>
-    <!-- <div id="skeleton"> -->
-      <li class="tarefa">
-        <div class="not-done"></div>
-        <div class="descricao">
-          <p class="nome">Nova tarefa</p>
-          <p class="timestamp">Criada em: 15/07/21</p>
-        </div>
-      </li>
-      <li class="tarefa">
-        <div class="not-done"></div>
-        <div class="descricao">
-          <p class="nome">Nova tarefa</p>
-          <p class="timestamp">Criada em: 15/07/21</p>
-        </div>
-      </li>
-      <li class="tarefa">
-        <div class="not-done"></div>
-        <div class="descricao">
-          <p class="nome">Nova tarefa</p>
-          <p class="timestamp">Criada em: 15/07/21</p>
-        </div>
-      </li>
-
-    </div>
   </ul>
-
+  
   <h2 class="titulo-terminadas">Tarefas terminadas</h2>
   <ul class="tarefas-terminadas">
-
+    
   </ul>
-
+</div>
+<script src="scripts/utils.js"></script>
+<script src="./scripts/tasks.js"></script>
 </body>
 
 </html>

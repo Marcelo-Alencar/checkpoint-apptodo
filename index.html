@@ -5,10 +5,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>To-Do App</title>
+  <title>To Do App - Turma 6</title>
 
   <!-- ---------------- estilos compartilhados entre login e signup ---------------- -->
   <link rel="stylesheet" href="styles/acesso.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- ---------------------- lógica aplicada no login ----------------------- -->
 
@@ -21,36 +25,34 @@
   </div>
 
   <div class="right">
-    <form>
-
+    <form method="post" id="formLogin">
       <div class="form-header">
         <p>To-Do App</p>
       </div>
       <h1>Acessar</h1>
-      
-      <div id="userEmailControl" class="form-control">
-        <label for="userEmail"> Email: </label>
-        <input type="email" id="userEmail" minlength="5" required>
-        <small>Forneça um e-mail válido</small>
-      </div>
 
-      <div id="userPasswordControl" class="form-control">
-        <label for="userPassword"> Senha: </label>
-        <input id="userPassword" type="password" minlength="8" required>
-        <small>Digite uma senha válida</small>
-      </div>
 
-      <div>
-        <button type="submit" id="buttonLoginUser">Acessar</button>
-      </div>
+      <label>
+        Email:
+        <input id="inputEmail" type="text">
+        <small id="errorEmail" class="error"></small>
+      </label>
+
+      <label>
+        Senha:
+        <input id="inputPassword" type="password">
+        <small id="errorPass" class="error"></small>
+      </label>
+
+      <button type="submit" id="buttonLogin">Acessar</button>
 
     </form>
-    <div class="ingressar">
+    <div class="ingresarA">
       <a href="signup.html">Não possui conta? Crie agora mesmo</a>
     </div>
   </div>
-
-  <script src="./scripts/index1.js"></script>
+  <script src="scripts/utils.js"></script>
+  <script src="scripts/index.js"></script>
 </body>
 
 </html>
