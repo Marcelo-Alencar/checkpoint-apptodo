@@ -25,7 +25,7 @@ formLogin.addEventListener("submit", event =>{
     //recorrer erros y mostrarlo
     if(erros.length !== 0){
         //mostrar erros
-        switchErrores(erros);
+        switchErros(erros);
     } else {
 
         console.log(pass);
@@ -115,7 +115,7 @@ function validarPass(erros) {
 
 
 
-function switchErrores(erros) {
+function switchErros(erros) {
     erros.forEach(error => {
         switch (error.input) {
             case "email":
