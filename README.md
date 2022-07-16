@@ -13,8 +13,8 @@ Este projeto consiste em um pequeno aplicativo de gerenciamento de tarefas, dent
 - Implementaremos um sistema de autenticação de usuários, que inclui o processo de registro e login.
 
 
-## Integrantes Grupo 6:
+## Integrantes do Grupo 6:
 - Ariane Sanchez - GitHub: https://github.com/ArianeSanchez
-- Franklin Melo- GitHub: 
+- Franklin Melo- GitHub: https://github.com/franklin533
 - Iélison Barbosa - GitHub: https://github.com/ielison
 - Marcelo Alencar - GitHub: https://github.com/Marcelo-Alencar
